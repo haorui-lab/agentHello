@@ -1,0 +1,25 @@
+# 字段来自 @deepseek-ai/dsh-mcp-client README（deepseek-ai/deepseek-harness，master）。
+# 官方示例 examples/mcp-memory/README.md 把同样的字段放在 Cordis overlay 的 insert 下面。
+# 这两处都没有写死本机该保存成哪个文件。本仓库没有在 dsh 里加载过。
+# 图片要进对话，还得当前模型接受图片，并且 attachment 开着。否则 dsh 只给诊断文字。这也没在 dsh 里看过。
+# 两个 Agent 用两个 dsh 进程，各自一个 serverName，各自一个 HELLO_AGENT_TOKEN。
+- id: mcp-hello
+  name: '@deepseek-ai/dsh-mcp-client'
+  config:
+    serverName: hello
+    transport: streamable-http
+    url: http://192.0.2.10:8731/mcp
+    headers:
+      Authorization: !!js '`Bearer ${process.env.HELLO_AGENT_TOKEN}`'
+    toolCallTimeoutMs: 60000
+
+# 若 profile 使用 overlay，官方示例的外层是 insert。文件名仍未核实：
+# - insert:
+#     - id: mcp-hello
+#       name: '@deepseek-ai/dsh-mcp-client'
+#       config:
+#         serverName: hello
+#         transport: streamable-http
+#         url: http://192.0.2.10:8731/mcp
+#         headers:
+#           Authorization: !!js '`Bearer ${process.env.HELLO_AGENT_TOKEN}`'

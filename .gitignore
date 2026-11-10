@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.py[cod]
+.env
+config/hello-center.env
+config/*.token
+.redis-data/
+*.rdb
+*.aof
+appendonlydir/

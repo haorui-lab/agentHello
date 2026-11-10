@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "hello-center": {
+      "type": "http",
+      "url": "http://192.0.2.10:8731/mcp",
+      "headers": {
+        "Authorization": "Bearer ${HELLO_AGENT_TOKEN}"
+      }
+    }
+  }
+}

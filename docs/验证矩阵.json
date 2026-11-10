@@ -1,0 +1,76 @@
+{
+  "runs": [
+    {
+      "redis_version": "5.0.14",
+      "passed": 68,
+      "failed": 0,
+      "redis_version_tested": true,
+      "pids": {
+        "redis": 5198,
+        "center": 5202,
+        "agent_a": 5209,
+        "agent_b": 5211,
+        "agent_c": 5215,
+        "agent_d": 5219,
+        "redis_restart": 5221
+      },
+      "kind": "same-machine-independent-processes",
+      "not": [
+        "cross-machine",
+        "claude-code-host",
+        "dsh-host"
+      ]
+    },
+    {
+      "redis_version": "6.2.18",
+      "passed": 68,
+      "failed": 0,
+      "redis_version_tested": true,
+      "pids": {
+        "redis": 5261,
+        "center": 5265,
+        "agent_a": 5272,
+        "agent_b": 5274,
+        "agent_c": 5279,
+        "agent_d": 5283,
+        "redis_restart": 5285
+      },
+      "kind": "same-machine-independent-processes",
+      "not": [
+        "cross-machine",
+        "claude-code-host",
+        "dsh-host"
+      ]
+    },
+    {
+      "redis_version": "7.2.11",
+      "passed": 68,
+      "failed": 0,
+      "redis_version_tested": true,
+      "pids": {
+        "redis": 5299,
+        "center": 5303,
+        "agent_a": 5310,
+        "agent_b": 5312,
+        "agent_c": 5316,
+        "agent_d": 5320,
+        "redis_restart": 5322
+      },
+      "kind": "same-machine-independent-processes",
+      "not": [
+        "cross-machine",
+        "claude-code-host",
+        "dsh-host"
+      ]
+    }
+  ],
+  "auth_smoke": {
+    "redis": "5.0.14",
+    "commands": [
+      "PING",
+      "SET",
+      "GET"
+    ],
+    "ok": true
+  }
+}

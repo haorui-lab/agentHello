@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "hello-center-register": {
+      "type": "http",
+      "url": "http://192.0.2.10:8731/mcp",
+      "headers": {
+        "X-Hello-Register-Secret": "${HELLO_REGISTER_SECRET}"
+      }
+    }
+  }
+}

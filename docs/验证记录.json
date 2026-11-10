@@ -1,0 +1,373 @@
+{
+  "kind": "same-machine-independent-processes",
+  "not": [
+    "cross-machine",
+    "claude-code-host",
+    "dsh-host"
+  ],
+  "pids": {
+    "redis": 5198,
+    "center": 5202,
+    "agent_a": 5209,
+    "agent_b": 5211,
+    "agent_c": 5215,
+    "agent_d": 5219,
+    "redis_restart": 5221
+  },
+  "agent_ids": {
+    "A": "80-000-007",
+    "B": "80-000-008",
+    "C": "80-000-009"
+  },
+  "health": {
+    "ok": true,
+    "service": "hello-center",
+    "version": "0.1.0",
+    "redis_version": "5.0.14",
+    "redis_version_tested": true
+  },
+  "passed": 68,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "healthz",
+      "ok": true,
+      "detail": "{'ok': True, 'service': 'hello-center', 'version': '0.1.0', 'redis_version': '5.0.14', 'redis_version_tested': True}"
+    },
+    {
+      "name": "register A",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "register B",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "two agent ids",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "missing credential",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "bad register secret",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "distinct pids",
+      "ok": true,
+      "detail": "{'redis': 5198, 'center': 5202, 'agent_a': 5209, 'agent_b': 5211}"
+    },
+    {
+      "name": "stable id after reconnect",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "heartbeat A",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "heartbeat B",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "lookup online",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "auto session 1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "auto session 2",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "duplicate call",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "send image",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "duplicate send keeps first id",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "send other session",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "await both sessions",
+      "ok": true,
+      "detail": "{'s9657f816c15fda86', 's86e099b515492afc'}"
+    },
+    {
+      "name": "await text isolation tags",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "await image bytes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "history s1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "history s2",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "reply",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "bidirectional",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "nl hangup is data",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "words did not hang up",
+      "ok": true,
+      "detail": "active"
+    },
+    {
+      "name": "hangup one session",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "other session remains",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "still online after hangup",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "peer sees one hangup",
+      "ok": true,
+      "detail": "[{'seq': 6, 'type': 'hangup', 'session_id': 's9657f816c15fda86', 'peer': '', 'sender': '', 'by': '80-000-007', 'text': '', 'has_image': False, 'message_id': '', 'created_at': '1794274905'}]"
+    },
+    {
+      "name": "send on remaining session",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "repeat hangup",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "missing peer",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "self call",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "await timeout",
+      "ok": true,
+      "detail": "0.41s"
+    },
+    {
+      "name": "deny send",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "deny history",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "deny hangup",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "deny hangup is forbidden",
+      "ok": true,
+      "detail": "forbidden"
+    },
+    {
+      "name": "explicit offline",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "offline keeps sessions",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "offline mailbox",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "duplicate mailbox",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "list mailbox does not call",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "list did not create session",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "reading mail stays offline",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "deny mailbox",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "mailbox image bytes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "await ignores mailbox",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "ack then repeat ack",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "acked mail hidden",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "offline again",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "second offline mail",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "bad image",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "B heartbeat before stale",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "D heartbeat",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "stale presence",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "dead process presence",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "redis down",
+      "ok": true,
+      "detail": "redis_unavailable"
+    },
+    {
+      "name": "identity after redis restart",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "mailbox after redis restart",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "image after redis restart",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "text limit",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "mailbox cap",
+      "ok": true,
+      "detail": "mailbox_full"
+    },
+    {
+      "name": "fixture image exceeds tiny limit",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "image limit",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "cursor expired",
+      "ok": true,
+      "detail": "cursor_expired"
+    },
+    {
+      "name": "session cap",
+      "ok": true,
+      "detail": "too_many_sessions"
+    }
+  ]
+}
